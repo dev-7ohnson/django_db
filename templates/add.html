@@ -9,9 +9,9 @@
   <div class="container">
   <h2>Add new Product</h2>
       <form action="{% url 'add' %}" method="post">
-          {% csrf_token %}
 
-           {% bootstrap_form form %}
+          {% csrf_token %}
+          {% bootstrap_form form %}
 {#          {{ form.as_p }}#}
           <button class="btn btn-info">Submit</button>
       </form>
