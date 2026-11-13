@@ -1,4 +1,5 @@
 {% extends 'master.html' %}
+{% load django_bootstrap5 %}
 
 {% block title %}
     Create Product
@@ -9,7 +10,9 @@
   <h2>Add new Product</h2>
       <form action="{% url 'add' %}" method="post">
           {% csrf_token %}
-          {{ form.as_p }}
+
+           {% bootstrap_form form %}
+{#          {{ form.as_p }}#}
           <button class="btn btn-info">Submit</button>
       </form>
   </div>
